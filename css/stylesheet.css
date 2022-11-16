@@ -1,0 +1,195 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    user-select: none;
+}
+
+#container {
+    width: 800px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* this gives all elements with the glow class an out glow, then hides them from view until govered over */
+.glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    mix-blend-mode: hard-light;
+}
+
+/* this reveals each of the circles as the mouse hovers over them */
+.glow:hover {
+    opacity: 1;
+    transition-duration: 500ms;
+}
+
+/*this is the largest orb*/
+#orb000 {
+    width: 610px;
+    height: 610px;
+    background-color: #000000;
+    border-radius: 100%;
+    box-shadow: 0px 0px 233px 144px rgb(255, 255, 255);
+    z-index: 9;
+    text-align: center;
+    overflow: visible;
+}
+
+/* this is for the text appearing inside irb containers */
+.text {
+    mix-blend-mode: difference;
+}
+
+#orb001 {
+    background-color: rgb(255, 255, 255);
+    width: 377px;
+    height: 377px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 144px 89px rgb(255, 251, 251);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* this is the video playing within orb001 */
+#clip {
+    height: 377px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+#orb002 {
+    background-color: rgb(0, 0, 0);
+    width: 233px;
+    height: 233px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 89px 55px rgb(255, 255, 255);
+    z-index: 11;
+    overflow: hidden;
+}
+/* this is the video playing in orb 2 */
+#clip2 {
+    height: 377px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+#orb003 {
+    background-color: rgb(255, 255, 255);
+    width: 144px;
+    height: 144px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 55px 34px rgb(255, 255, 255);
+    z-index: 12;
+}
+
+#orb004 {
+    background-color: rgb(0, 0, 0);
+    width: 89px;
+    height: 89px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 34px 21px rgb(255, 255, 255);
+    z-index: 13;
+}
+
+/* this places an image of cracked glass over the top of the element */
+#orb004>img {
+    width: 350px;
+    height: auto;
+    overflow: visible;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#orb005 {
+    background-color: rgb(255, 255, 255);
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 21px 13px rgb(255, 255, 255);
+    z-index: 14;
+}
+
+#orb006 {
+    background-color: rgb(0, 0, 0);
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 13px 8px rgb(255, 255, 255);
+    z-index: 15;
+}
+
+#orb007 {
+    background-color: rgb(255, 255, 255);
+    width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 8px 5px rgb(255, 255, 255);
+    z-index: 16;
+}
+
+#orb008 {
+    background-color: rgb(0, 0, 0);
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px 3px rgb(255, 255, 255);
+    z-index: 17;
+}
+
+/* smallest and main orb */
+#orb009 {
+    background-color: rgb(255, 255, 255);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 3px 2px rgb(255, 255, 255);
+    z-index: 18;
+    opacity: 0;
+    display: block;
+}
+
+
+/* this changes the middle orb on hover to a glow effect */
+#orb009:hover {
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 55px 34px rgb(248, 245, 43), 0px 0px 89px 55px rgb(234, 0, 255), 0px 0px 144px 89px rgb(0, 238, 255), 0px 0px 233px 144px rgb(248, 255, 152), 0px 0px 377px 144px rgb(255, 0, 0);
+    font-size: 55px;
+    cursor: pointer;
+}
+
+/* this shrinks the size of the meditation svg on hover of orb 009 */
+#orb009:hover+.mediman {
+    position: fixed;
+    transform: scale(34%);
+    top: -250px;
+    left: 0.11%;
+    transition-duration: 1.44s;
+}
+
+/* meditating man as default hidden off screen at the bottom via the top position*/
+.mediman {
+    position: fixed;
+    top: 1150px;
+    left: 964px;
+    transform: translate(-50%, -50%);
+    /* z-index: 25; */
+    pointer-events: none;
+}
