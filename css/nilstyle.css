@@ -1,0 +1,37 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+#container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 500px;
+    width: 1500px;
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    animation: size;
+    animation-duration: 1.44s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes size{
+    0% {
+        font-size: 144px;
+        text-shadow: 0px 0px 55px white;
+    }
+    50% {
+        font-size: 89px;
+        text-shadow: 0px 0px 34px red;
+    }
+    100% {
+        font-size: 144px;
+        text-shadow: 0px 0px 55px white;
+    }
+}

@@ -4,6 +4,31 @@ body {
     user-select: none;
 }
 
+h1{
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 140px;
+    margin-bottom: 0px;
+    text-shadow: 0px 0px 55px red, 0px 0px 34px blue, 0px 0px 21px purple, 0px 0px 13px white;
+    animation: glowtext;
+    animation-duration: 1.44s;
+    animation-iteration-count: infinite;
+
+}
+
+/* This is the glowing text of the header animation*/
+@keyframes glowtext{
+    0% {
+        opacity: 0.13;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.13;
+    }
+}
+
 #container {
     width: 800px;
     height: 800px;
@@ -38,6 +63,7 @@ body {
     z-index: 9;
     text-align: center;
     overflow: visible;
+    display: block;
 }
 
 /* this is for the text appearing inside irb containers */
@@ -176,20 +202,18 @@ body {
 }
 
 /* this shrinks the size of the meditation svg on hover of orb 009 */
-#orb009:hover+.mediman {
-    position: fixed;
-    transform: scale(34%);
-    top: -250px;
-    left: 0.11%;
+#orb009:hover + #medimancont {
+    margin-top: 415px;
+    margin-left: 251px;
+    width: 300px;
     transition-duration: 1.44s;
 }
 
-/* meditating man as default hidden off screen at the bottom via the top position*/
-.mediman {
-    position: fixed;
-    top: 1150px;
-    left: 964px;
-    transform: translate(-50%, -50%);
-    /* z-index: 25; */
+/* meditating man weighted towards bottom*/
+#medimancont {
+    width: 900px;
+    height: 900px;
+    margin-top: 330px;
+    margin-left: -49px;
     pointer-events: none;
 }
