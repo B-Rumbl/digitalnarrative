@@ -3,14 +3,14 @@ body {
 }
 
 #imgcont {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1800px;
+    width: 300px;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .imgres {
     opacity: 0;
-    position: fixed;
+    position: absolute;
     margin-top: 100px;
     animation: rotate linear, fading01;
     animation-iteration-count: 1;

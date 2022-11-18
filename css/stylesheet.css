@@ -203,7 +203,7 @@ h1{
 
 /* this shrinks the size of the meditation svg on hover of orb 009 */
 #orb009:hover + #medimancont {
-    margin-top: 415px;
+    margin-top: 29%;
     margin-left: 251px;
     width: 300px;
     transition-duration: 1.44s;
@@ -213,7 +213,7 @@ h1{
 #medimancont {
     width: 900px;
     height: 900px;
-    margin-top: 330px;
+    margin-top: 18%;
     margin-left: -49px;
     pointer-events: none;
 }
