@@ -1,6 +1,6 @@
 document.getElementById("orb009").addEventListener("click", pg2Select);
 function pg2Select(){
-    window.location.href = "page2.html"
+    window.location.href = "page002.html"
 }
 
 document.getElementById("orb000").addEventListener("click", nilBunny);

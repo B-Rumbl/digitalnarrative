@@ -1,0 +1,222 @@
+* {
+    background-color: black;
+    color: white;
+    user-select: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+#title {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 25px;
+    text-shadow: 0px 0px 55px red, 0px 0px 34px blue, 0px 0px 21px purple, 0px 0px 13px white;
+    animation: glowtext;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes glowtext {
+    0% {
+        opacity: 0.13;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.13;
+    }
+}
+
+#svgcont {
+    margin-top: 10px;
+    /* padding-top: 50px; */
+    padding-left: 100px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+svg {
+    margin-top: 100px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+path {
+    fill: transparent;
+    stroke: rgb(255, 255, 255);
+    /* opacity: 0.25; */
+    z-index: 50;
+}
+
+path:hover {
+    opacity: 0.5;
+    stroke-width: 10px;
+}
+
+text {
+    fill: #ffffff;
+    font-size: 35px;
+    line-height: 5px;
+    z-index: 100;
+    /* stroke: black; */
+    text-shadow: 0px 0px 3px black;
+}
+
+text:hover {
+    text-shadow: 0px 0px 8px white;
+    font-size: 33px;
+}
+
+.cls-1 {
+    stroke-width: 5px;
+    stroke-linecap: round;
+    filter: drop-shadow(0px 0px 21px white);
+    mix-blend-mode: lighten;
+}
+
+.cls-2 {
+    stroke: rgb(255, 255, 255);
+    stroke-width: 5px;
+    stroke-linecap: round;
+    filter: drop-shadow(0px 0px 21px #ff0000);
+    mix-blend-mode: lighten;
+
+}
+
+#orb000 {
+    width: 233px;
+    height: 233px;
+    background-color: transparent;
+    font-size: 34px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 89px 55px rgb(255, 0, 0);
+    z-index: 9;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    animation-delay: 1;
+
+}
+
+#orb001 {
+    width: 144px;
+    height: 144px;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 0px 55px 34px rgb(255, 136, 0);
+    z-index: 10;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    animation-delay: 1.5s;
+    
+}
+
+#orb002 {
+    width: 89px;
+    height: 89px;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 0px 34px 21px rgb(217, 255, 0);
+    z-index: 11;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    animation-delay: 2s;
+    
+}
+
+#orb003 {
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 0px 21px 13px rgb(15, 184, 0);
+    z-index: 12;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    animation-delay: 2.5s;
+    
+}
+
+#orb004 {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 0px 13px 8px rgb(0, 217, 255);
+    z-index: 13;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    animation-delay: 3s;
+    
+}
+
+#orb005 {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 55px 34px rgb(248, 245, 43), 0px 0px 89px 55px rgb(234, 0, 255), 0px 0px 144px 89px rgb(0, 238, 255), 0px 0px 233px 144px rgb(248, 255, 152), 0px 0px 377px 144px rgb(255, 0, 0);
+    z-index: 14;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    cursor: pointer;
+    animation-delay: 3.5s;
+
+}
+
+.glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    mix-blend-mode: hard-light;
+}
+
+#orb005:hover {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    /* mix-blend-mode: hard-light; */
+}
+
+.glow:hover {
+    opacity: 1;
+    /* transition-duration: 1s; */
+}
+
+.fadeout{
+    animation: fadeout;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
