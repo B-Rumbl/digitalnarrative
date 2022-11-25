@@ -1,0 +1,483 @@
+* {
+    background-color: black;
+}
+
+body {
+    color: white;
+    margin: 0px;
+}
+
+/* Box container for all elements of the page, ti ensure it doesn't go into scrolling */
+#pagecont {
+    width: 1500px;
+    height: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* This is the 3 boxes for the flex containers below */
+.box {
+    width: 450px;
+    height: 930px;
+}
+
+/* This is for the boxes contained within the flex divs above */
+.innerdiv {
+    width: 400px;
+    height: 310px;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Left most container for orbs */
+#pnt1 {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Middle container for making text appear */
+#pnt2 {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Right most container for orbs */
+#pnt3 {
+    background-color: rgb(0, 0, 0);
+}
+
+/* This handles the size of each orb div element */
+.orb {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 100;
+    position: absolute;
+    animation: floatdown ease-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* This is the animation for when the orbs fall into position */
+.orbripple {
+    animation: ripple;
+    animation-duration: 3s;
+    cursor: pointer;
+
+}
+/* LEft most container elements */
+/* First orb that comes in */
+#orb000 {
+    right: 21%;
+    display: block;
+}
+
+#orbrip000 {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    z-index: 101;
+    animation-delay: 2s;
+}
+
+/* Second orb */
+#orb001 {
+    margin-bottom: 55px;
+    right: 89%;
+    animation-delay: 0.5s;
+    background-color: transparent;
+}
+
+#orbrip001 {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 2.5s;
+    z-index: 102;
+}
+
+/* third orb */
+#orb002 {
+    margin-bottom: 233px;
+    right: 55%;
+    animation-delay: 1s;
+    background-color: transparent;
+}
+
+#orbrip002 {
+    position: relative;
+    animation-delay: 3s;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 103;
+    background-color: transparent;
+}
+
+/* Fourth orb */
+#orb000a {
+    right: 250px;
+    margin-bottom: 250px;
+    animation-delay: 1.5s;
+}
+
+#orbrip000a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 101;
+    animation-delay: 3.5s;
+    background-color: transparent;
+}
+
+/* fifth orb */
+#orb001a {
+    margin-bottom: 89px;
+    right: 34%;
+    animation-delay: 2s;
+    background-color: transparent;
+}
+
+#orbrip001a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 4s;
+    z-index: 102;
+}
+
+/* sixth orb */
+#orb002a {
+    margin-bottom: 89px;
+    right: 377px;
+    animation-delay: 3s;
+    background-color: transparent;
+}
+
+#orbrip002a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 5s;
+    z-index: 102;
+}
+
+/* Ripple animation on click */
+.orb:hover{
+    background-color: black;
+    box-shadow: 0px 0px 13px 13px rgb(248, 245, 43), 0px 0px 21px 21px rgb(234, 0, 255), 0px 0px 34px 34px rgb(0, 238, 255);
+}
+
+.clickripple:focus{
+    animation: clickripple; 
+    animation-duration: 2s;
+}
+
+.clickripple:active{
+    animation: none;
+}
+
+@keyframes clickripple {
+    0% {
+        opacity: 0;
+        scale: 1;
+        box-shadow: 0px 0px 13px 8px white;
+    }
+    
+    5% {
+        opacity: 1;
+        scale: 2;
+    }
+    
+    8% {
+        opacity: 0;
+        scale: 3;
+
+    }
+    
+    13% {
+        opacity: 0.75;
+        scale: 5;
+    }
+    
+    21% {
+        opacity: 0;
+        scale: 8;
+    }
+    
+    34% {
+        opacity: 0.5;
+        scale: 13;
+    }
+    
+    55% {
+        opacity: 0;
+        scale: 21;
+    }
+    
+    89% {
+        opacity: 0.25;
+        scale: 34;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 55;
+    }
+}
+
+/* Animations for orbs */
+@keyframes floatdown {
+    0% {
+        bottom: 500px;
+        background-color: transparent;
+    }
+    
+    20% {
+        background-color: white;
+        
+    }
+    
+    100% {
+        bottom: 0%;
+        background-color: white;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 0;
+        scale: 1;
+        box-shadow: 0px 0px 13px 8px white;
+    }
+    
+    5% {
+        opacity: 1;
+        scale: 2;
+    }
+    
+    8% {
+        opacity: 0;
+        scale: 3;
+
+    }
+    
+    13% {
+        opacity: 0.75;
+        scale: 5;
+    }
+    
+    21% {
+        opacity: 0;
+        scale: 8;
+    }
+    
+    34% {
+        opacity: 0.5;
+        scale: 13;
+    }
+    
+    55% {
+        opacity: 0;
+        scale: 21;
+    }
+    
+    89% {
+        opacity: 0.25;
+        scale: 34;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 55;
+    }
+}
+
+/* Animation for text */
+@keyframes glowtext {
+    0% {
+        opacity: 0.13;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.13;
+    }
+}
+
+/* Central elements */
+/* Header */
+.top {
+    text-align: center;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    text-shadow: 0px 0px 55px red, 0px 0px 34px blue, 0px 0px 21px purple, 0px 0px 13px white;
+    animation: glowtext;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#sub{
+    text-decoration: underline;
+}
+/* text box one */
+.txtdes{
+    text-align: center;
+    margin: 10px;
+}
+
+#txt1{
+
+}
+
+#next{
+    display: flexbox;
+    color: black;
+    position: relative;
+    margin-left: 165px;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 100px;
+    height: 50px;
+    line-height:  50px;
+    visibility: hidden;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Right side contents */
+/* First Orb */
+
+#orb003 {
+    left: 21%;
+    animation-delay: 0.5;
+}
+
+#orbrip003 {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    z-index: 101;
+    animation-delay: 2.5s;
+}
+
+/* Second orb */
+#orb004 {
+    margin-bottom: 55px;
+    left: 89%;
+    animation-delay: 1s;
+    background-color: transparent;
+}
+
+#orbrip004 {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 3s;
+    z-index: 102;
+}
+
+/* third orb */
+#orb005 {
+    margin-bottom: 233px;
+    left: 55%;
+    animation-delay: 1.5s;
+    background-color: transparent;
+}
+
+#orbrip005 {
+    position: relative;
+    animation-delay: 3.5s;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 110;
+    background-color: transparent;
+}
+
+/* Fourth orb */
+#orb003a {
+    left: 250px;
+    margin-bottom: 250px;
+    animation-delay: 2s;
+}
+
+#orbrip003a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 110;
+    animation-delay: 4s;
+    background-color: transparent;
+}
+
+/* fifth orb */
+#orb004a {
+    margin-bottom: 89px;
+    left: 34%;
+    animation-delay: 2.5s;
+    background-color: transparent;
+}
+
+#orbrip004a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 4.5s;
+    z-index: 110;
+}
+
+/* sixth orb */
+#orb005a {
+    margin-bottom: 89px;
+    left: 377px;
+    animation-delay: 3.5s;
+    background-color: transparent;
+}
+
+#orbrip005a {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: transparent;
+    animation-delay: 5.5s;
+    z-index: 110;
+}
