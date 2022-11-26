@@ -1,4 +1,270 @@
-body{
-    background-color: black;
+body {
+    background-color: rgb(0, 0, 0);
     color: white;
+}
+/* this is the text located on the left of the screen */
+#lefttxt {
+    position: fixed;
+    top: 450px;
+    left: -300px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    transform: rotate(-90deg);
+    animation: fadeout 10s;
+    opacity: 1;
+    animation-delay: 20s;
+    animation-fill-mode: forwards;
+}
+/* Fadeout animation for the left text */
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* button for continuing to the final page */
+#next{
+    width: 800px;
+    height: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 350px;
+    font-weight: 400;
+    font-size: 55px;
+    opacity: 0.9;
+    position: fixed;
+    left: 150px;
+    top: 525px;
+    animation: fadein 5s;
+    opacity: 0;
+    animation-delay: 100s;
+    animation-fill-mode: forwards;
+    display: block;
+    border-radius: 50px;
+    z-index: 200;
+}
+
+#next:hover{
+    cursor: pointer;
+}
+
+
+
+
+/* this will replace the text on the left */
+#leftreplace{
+    position: fixed;
+    top: 450px;
+    left: -300px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    transform: rotate(-90deg);
+    animation: fadein 5s;
+    opacity: 0;
+    animation-delay: 78s;
+    animation-fill-mode: forwards;
+}
+
+.corecont {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    
+}
+/* this is the animation playing in the background */
+.slidingback{
+    position: fixed;
+    top: 50%;
+    /* left: 600%; */
+    transform: translate(-50%, -50%);
+    animation: slide;
+    animation-duration: 80s;
+    animation-fill-mode: forwards;
+}
+/* Animation keyframes for the scrolling background */
+@keyframes slide{
+    0%{
+        left: 500%;
+    }
+    50%{
+        left: 0%;
+    }
+    100%{
+        left: 600%;
+    }
+}
+/* This is the text that will appear after the animation */
+#textappear{
+    width: 800px;
+    position: fixed;
+    left: 550px;
+    top: 290px;
+    transform: translate(-50%, -50%);
+    animation: fadein 5s;
+    opacity: 0;
+    animation-delay: 80s;
+    animation-fill-mode: forwards;
+}
+/* this makes the text appear after the animations are complete */
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Container for the images */
+#imgcont {
+    width: 900px;
+    height: 900px;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+/* This is the rotating centre piece */
+.imgres {
+    opacity: 0;
+    animation: rotate linear, fading01;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    scale: 0.6;
+    margin-top: -50px;
+    overflow: hidden;
+}
+/* PNG Images for the central animation */
+#cd001 {
+    animation-duration: 4s;
+    z-index: 1;
+}
+
+#cd002 {
+    animation-delay: 4s;
+    z-index: 2;
+}
+
+#cd003 {
+    animation-delay: 8s;
+}
+
+#cd004 {
+    animation-delay: 12s;
+}
+
+#cd005 {
+    animation-delay: 16s;
+}
+
+#cd006 {
+    animation-delay: 20s;
+}
+
+#cd007 {
+    animation-delay: 24s;
+}
+
+#cd008 {
+    animation-delay: 28s;
+}
+
+#cd009 {
+    animation-delay: 32s;
+}
+
+#cd010 {
+    animation-delay: 36s;
+}
+
+#cd011 {
+    animation-delay: 40s;
+}
+
+#cd012 {
+    animation-delay: 44s;
+}
+
+#cd013 {
+    animation-delay: 48s;
+}
+
+#cd014 {
+    animation-delay: 52s;
+}
+
+#cd015 {
+    animation-delay: 56s;
+}
+
+#cd016 {
+    animation-delay: 60s;
+}
+
+#cd017 {
+    animation-delay: 64s;
+}
+
+#cd018 {
+    animation-delay: 68s;
+}
+
+#cd019 {
+    animation-delay: 72s;
+}
+
+#cd020 {
+    animation-delay: 76s;
+}
+
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg), ;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fading01 {
+    0% {
+        opacity: 0;
+        scale: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.6;
+    }
+}
+
+#circ {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 55px 34px white;
+    border-radius: 100%;
 }

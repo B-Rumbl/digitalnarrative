@@ -72,6 +72,7 @@ body {
 #orb000 {
     right: 21%;
     display: block;
+    
 }
 
 #orbrip000 {
@@ -83,6 +84,8 @@ body {
     z-index: 101;
     animation-delay: 2s;
 }
+
+
 
 /* Second orb */
 #orb001 {
@@ -176,7 +179,11 @@ body {
 /* Ripple animation on click */
 .orb:hover{
     background-color: black;
-    box-shadow: 0px 0px 13px 13px rgb(248, 245, 43), 0px 0px 21px 21px rgb(234, 0, 255), 0px 0px 34px 34px rgb(0, 238, 255);
+    box-shadow: 0px 0px 13px 13px rgb(248, 245, 43), 0px 0px 21px 21px rgb(234, 0, 255);
+}
+
+.orb:active{
+    box-shadow: none;
 }
 
 .clickripple:focus{
@@ -358,6 +365,7 @@ body {
     visibility: hidden;
     background-color: aqua;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 
